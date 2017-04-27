@@ -1,0 +1,253 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  background: rgb(40, 40, 40);
+}
+
+@media only screen and (max-width: 726px) {
+  .ifSmallPoof {
+    display: none;
+  }
+}
+
+
+
+@media only screen and (min-width: 726px) {
+
+    /* disables mobile mode by making mobile mode display nothing */
+    .ifLargePoof {
+        display: none;
+    }
+
+    /* Desktop mode css */
+    .home {
+      position: relative;
+      top: 100px;
+      text-align: center;
+      font-family: inherit;
+      cursor: default;
+      color: rgb(252, 252, 252);
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+      height: 900px;
+      margin: 0 auto;
+    }
+
+    .homeBackground {
+      margin-top: -90px;
+      padding-top: 90px;
+      background-size: cover;
+      background:linear-gradient(rgba(218, 218, 218, 0.14) 0%, rgba(10, 25, 10, 0.5)), url(../img/Keyboard.jpg) 50% 0 no-repeat fixed;
+    }
+
+    .homeh1Tag {
+      font-family: 'VT323', monospace;
+      color: lime;
+      margin-bottom: -1%;
+      font-size: 84px;
+      /* Note the fucking animation isin't working */
+      animation:  typing 2s steps(26, end),
+                  blink-caret 1s step-end 2s;
+    }
+
+    .homepTag {
+      font-family: 'Audiowide', cursive;
+      font-size: 28px;
+      margin: 10px;
+    }
+
+    .homeTXT {
+      font-family: 'Audiowide', cursive;
+      font-size: 24px;
+      margin: 10px;
+    }
+
+    .blink_me {
+      animation: blinker 1s step-start infinite;
+    }
+
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
+
+    .aboutBackground {
+      background:linear-gradient(rgba(218, 218, 218, 0.14) 0%, rgba(10, 25, 10, 0.5)), url(../img/Grid.jpg) 50% 0 no-repeat fixed;
+      overflow: auto;
+      padding-bottom: 10%;
+    }
+
+    .about {
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      color: rgb(252, 252, 252);
+    }
+
+    .aboutBoxLeft {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      float: left;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 40%;
+      line-height: 35px;
+    }
+
+    .aboutBoxRight {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      float: right;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 40%;
+      line-height: 35px;
+    }
+
+    .aboutTXT {
+      font-size: 24px;
+    }
+
+    .abouth1TXT {
+      font-family: 'VT323', monospace;
+      color: lime;
+      padding-top: 2.5%;
+      text-align: center;
+      font-size: 64px;
+    }
+
+    /* I wasted too much time on making a bloody ASCII arrow xD */
+    .ASCIIarrow {
+      position: relative;
+      left: 15px;
+      font-size: 244px;
+      -ms-transform: rotate(90deg); /* IE 9 */
+      -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+      transform: rotate(90deg);
+    }
+
+    .ASCIIarrowW {
+      margin-top: 150px;
+      margin-bottom: -5px;
+      font-size: 54px;
+      line-height: 0px;
+    }
+
+    .topASCII {
+      text-shadow: -2px 0 black, 0 0px black, 2px 0 black, 0 -2px black;
+      font-size: 64px;
+      line-height: 48px;
+    }
+
+    .bottomASCII {
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 0px black;
+      font-size: 64px;
+      line-height: 0px;
+    }
+
+    .ASCIIarrowhead {
+      font-size: 45px;
+      line-height: 10px;
+    }
+
+    .ASCIIart1 {
+      /* bottom and left decides where the arrow lies */
+      position: relative;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    .darkBlockSeperator {
+      background: rgb(100, 100, 100);
+      width: 100%;
+      height: 20px;
+      line-height: 300px;
+      text-align: center;
+    }
+}
+
+h1:hover {
+  cursor: default;
+}
+
+p:hover {
+  cursor: default;
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: rgb(200, 200, 200);
+  font-size: 24px;
+  border-radius: 40px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+a.nav-link:hover { /* just close the comment on row 81 to turn the cursor into a middle finger when hovering over "a" tags */
+  /* As funny as it may be I'm better of safe than sorry which is why i turned it off (for now xD) */
+  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), progress; /* http://www.cursors-4u.com best site ever xD. Specifik page where i nabbed this awesome cursor from :P http://www.cursors-4u.com/cursor/2005/05/05/sym46.html */
+  background: rgb(200, 200, 200);
+  color: rgb(30, 30, 30);
+  height: 100%;
+  font-size: 32px;
+}
+
+a.nav-link {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Below CSS applies to both desktop and mobile */
+.navbar {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+.nav-link {
+  padding: 0;
+}
+
+.navbar-custom {
+  font-family: 'Audiowide', cursive;
+  background: rgba(30, 30, 30, 0.5);
+  z-index: 2;
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgb(80, 80, 80);
+  color: rgb(200, 200, 200);
+  font-size: 18px;
+  padding: 10px 0 10px 0;
+  width: 100%;
+}
+
+.bounce {
+  animation: bounce_1797 1.95s ease infinite; transform-origin: 50% 50%;
+  }
+  @keyframes bounce_1797
+  { 0%
+    { transform:translateY(0) } 10.25641%
+    { transform:translateY(0) } 20.51282%
+    { transform:translateY(0) } 41.02564%
+    { transform:translateY(-15px) } 51.28205%
+    { transform:translateY(0) } 61.53846%
+    { transform:translateY(-15px) } 82.05128%
+    { transform:translateY(0) } 100%
+    { transform:translateY(0) }
+  }
