@@ -45,11 +45,9 @@ body {
     .homeh1Tag {
       font-family: 'VT323', monospace;
       color: lime;
+      margin-top: 5%;
       margin-bottom: -1%;
       font-size: 84px;
-      /* Note the fucking animation isin't working */
-      animation:  typing 2s steps(26, end),
-                  blink-caret 1s step-end 2s;
     }
 
     .homepTag {
@@ -83,32 +81,42 @@ body {
       color: rgb(252, 252, 252);
     }
 
-    .aboutBoxLeft {
+    .aboutBoxes {
       background: rgba(0, 0, 0, 0.4);
       border-radius: 20px;
       padding-right: 30px;
       padding-left: 30px;
       padding-top: 10px;
       padding-bottom: 0px;
-      float: left;
-      margin-left: 5%;
-      margin-right: 5%;
-      width: 40%;
+      font-family: 'Audiowide', cursive;
+      min-height: 700px;
+      margin-left: 1.25%;
+      margin-right: 1.25%;
+      width: 47.5%;
       line-height: 35px;
     }
 
+    .aboutBoxLeft {
+      padding-top: 4%;
+      float: left;
+      text-align: left;
+    }
+
     .aboutBoxRight {
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
-      padding-top: 10px;
-      padding-bottom: 0px;
       float: right;
-      margin-left: 5%;
-      margin-right: 5%;
-      width: 40%;
-      line-height: 35px;
+      text-align: center;
+    }
+    /* I should seriously try to get better at naming stuff :P */
+    .rightBoxLeftBox {
+      float: left;
+      margin: 1.25% 1.25% 1.25% 1.25%;
+      width: 47.5%
+    }
+
+    .rightBoxRightBox {
+      float: right;
+      margin: 1.25% 1.25% 1.25% 1.25%;
+      width: 47.5%
     }
 
     .aboutTXT {
@@ -121,6 +129,17 @@ body {
       padding-top: 2.5%;
       text-align: center;
       font-size: 64px;
+    }
+
+    .aboutGallery {
+      text-align: center;
+    }
+
+    .galleryimg {
+      margin-top: 5%;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
     }
 
     /* I wasted too much time on making a bloody ASCII arrow xD */
@@ -190,20 +209,17 @@ a.nav-link {
   text-align: center;
 }
 
-a.nav-link:hover { /* just close the comment on row 81 to turn the cursor into a middle finger when hovering over "a" tags */
-  /* As funny as it may be I'm better of safe than sorry which is why i turned it off (for now xD) */
-  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), progress; /* http://www.cursors-4u.com best site ever xD. Specifik page where i nabbed this awesome cursor from :P http://www.cursors-4u.com/cursor/2005/05/05/sym46.html */
+a.nav-link:hover {
   background: rgb(200, 200, 200);
   color: rgb(30, 30, 30);
-  height: 100%;
   font-size: 32px;
 }
 
 a.nav-link {
   padding-left: 10px !important;
   padding-right: 10px !important;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  height: 55px;
+  line-height: 55px;
 }
 
 /* Below CSS applies to both desktop and mobile */
@@ -218,11 +234,18 @@ a.nav-link {
 }
 
 .navbar-custom {
+  height: 70px;
+  line-height: 70px;
   font-family: 'Audiowide', cursive;
   background: rgba(30, 30, 30, 0.5);
   z-index: 2;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 10px;
+}
+
+a:hover { /* just close the comment on row 81 to turn the cursor into a middle finger when hovering over "a" tags */
+  /* As funny as it may be I'm better of safe than sorry which is why i turned it off (for now xD)
+  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), progress; /* http://www.cursors-4u.com best site ever xD. Specifik page where i nabbed this awesome cursor from :P http://www.cursors-4u.com/cursor/2005/05/05/sym46.html */
 }
 
 footer {
