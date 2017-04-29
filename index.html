@@ -16,10 +16,10 @@
     <nav class="navbar navbar-toggleable-sm navbar-custom" role="navigation">
       <ul class="navbar-nav container-fluid">
         <li class="nav-item py-md-3">
-          <a href="#" class="nav-link">About</a>
+          <a href="#aboutPos" class="nav-link">About</a>
         </li>
         <li class="nav-item py-md-3">
-          <a href="#" class="nav-link">Home</a>
+          <a href="#top" class="nav-link">Home</a>
         </li>
         <li class="nav-item py-md-3">
           <a href="#" class="nav-link">Contact</a>
@@ -28,24 +28,24 @@
     </nav>
 
     <div class="homeBackground">
-        <div class="home">
-            <h1 class="homeh1Tag">HELLO WORLD!<span class="blink_me homeh1Tag">_</span></h1><br>
-          <p class="homepTag">
-            I'm currently a student at Optima studying to become a programmer/software engineer <br>
-          </p>
-          <p class="homeTXT">
-            I made a portfolio of my current experience so far, that's below. If you are interested in knowing a little bit more about me<br>
-            have a look!
-          </p>
-          <div class="ASCIIart1">
-            <div class="bounce animated infinite">
-              <p class="ASCIIarrow">➢</p>
-            </div>
+      <div class="home">
+        <h1 class="homeh1Tag">HELLO WORLD!<span class="blink_me homeh1Tag">_</span></h1><br>
+        <p class="homepTag">
+          I'm currently a student at Optima studying to become a programmer/software engineer <br>
+        </p>
+        <p class="homeTXT">
+          I made a portfolio of my current experience so far, that's below. If you are interested in knowing a little bit more about me<br>
+          have a look!
+        </p>
+        <div class="ASCIIart1">
+          <div class="bounce animated infinite">
+            <p class="ASCIIarrow">➢</p>
           </div>
         </div>
       </div>
+    </div>
 
-    <div class="darkBlockSeperator"></div>
+    <div class="darkBlockSeperator" id="aboutPos"></div>
 
     <div class="aboutBackground">
       <div class="about">
@@ -74,17 +74,26 @@
 
             html for back button
 
+            <link href="https://fonts.googleapis.com/css?family=Audiowide|VT323" rel="stylesheet">
+
+            And stop forgetting the man font
+
             <a href="../../index.html" class="backButton">back</a>
 
             CSS for back button
 
             .backButton {
+              text-align: center;
+              width: 100%;
               position: fixed;
-              top: 40px;
+              top: 50px;
+              height: 70px;
+              line-height: 70px;
+              font-family: 'Audiowide', cursive;
+              background: rgba(30, 30, 30, 0.5);
               font-size: 24px;
               color: white;
               text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-              margin-left: 40px;
             }
 
             -->
@@ -100,10 +109,10 @@
           </div>
 
           <div class="rightBoxRightBox">
-            <a href="#">
+            <a href="work/Ovning2/index.html">
               <img class="galleryimg" src="img/TopGames.jpg" alt="well damnb..." />
             </a>
-            <a href="#">
+            <a href="work/Tribute-Page/index.html">
               <img class="galleryimg" src="img/TLT.jpg" alt="well damnb..." />
             </a>
           </div>
@@ -137,8 +146,47 @@
 <!-- place holder is holding the footer until i know wtf to do with it -->
 <footer>Copyright &copy; 2017 all rights reserved</footer>
 
+    <!-- scrip 153 should be for smooth scrolling -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                  return false;
+                } else {
+                  $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                  $target.focus(); // Set focus again
+                };
+              });
+            }
+          }
+        });
+    </script>
   </body>
 </html>
