@@ -13,6 +13,9 @@
 
 <!-- Desktop Mode -->
 <div class="ifSmallPoof">
+
+    <div id="top"></div>
+
     <nav class="navbar navbar-toggleable-sm navbar-custom" role="navigation">
       <ul class="navbar-nav container-fluid">
         <li class="nav-item py-md-3">
@@ -22,7 +25,7 @@
           <a href="#top" class="nav-link">Home</a>
         </li>
         <li class="nav-item py-md-3">
-          <a href="#" class="nav-link">Contact</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -60,7 +63,9 @@
             but it made me quite familiar with getting around problems in a nonconventional way and to also construct
             my own solutions from the information provided by others who are building similar software and sharing their woes and problems with their code.
             I have compiled a gallery of some of my projects if you are interested. You can find them at my <a href="#">gallery</a>
-            or just click any of the following images of my previous projects to jump to the <a href="#">gallery</a>.
+            or just click any of the following images of my previous projects to jump to the <a href="#">gallery</a>. <br>
+            <br>
+            I should probably also leave a link to my <a href="https://github.com/JupiterParach">Github</a> account.
           </p>
         </div>
 
@@ -98,21 +103,21 @@
 
             -->
 
-            <a href="work/Ovning5/index.html">
+            <a href="Work/Ovning5/Index.html">
               <img class="galleryimg" src="img/Ovning1OnOff.jpg" alt="well damnb..." />
             </a>
 
-            <a href="work/Ovning4/gallery.html">
+            <a href="Work/Ovning4/gallery.html">
               <img class="galleryimg" src="img/Memes.jpg" alt="well damnb..." />
             </a>
 
           </div>
 
           <div class="rightBoxRightBox">
-            <a href="work/Ovning2/index.html">
+            <a href="Work/Ovning2/index.html">
               <img class="galleryimg" src="img/TopGames.jpg" alt="well damnb..." />
             </a>
-            <a href="work/Tribute-Page/index.html">
+            <a href="Work/Tribute-Page/index.html">
               <img class="galleryimg" src="img/TLT.jpg" alt="well damnb..." />
             </a>
           </div>
@@ -120,22 +125,73 @@
         </div>
       </div>
     </div>
-</div>
+
+    <div class="darkBlockSeperator" id="contact"></div>
+
+    <div class="ContactContainer">
+      <h1 class="ContactHeader">Contact<span class="blink_me ContactHeader">_</span></h1>
+      <p class="ContactTXT">
+        Call Number +358 40 4163735  <br>
+
+        Or you can send an email below
+      </p>
+
+      <div class="formContainer">
+
+        <form method="post" name="contact_form" action="email-manager.php">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">I will never share your email with anyone else.</small>
+          </div>
+        <div class="form-group">
+          <label for="exampleTextarea">Message</label>
+          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label required">
+            <input type="checkbox" class="form-check-input">
+            Check, if you aren't a robot
+          </label>
+        </div>
+        <input type="text" name="human" placeholder="What is 3 + 2?"> <br> <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+
+<!--
+      <form>
+        <div class="inputBoxes">
+          <input type="text" placeholder="First name" required>
+          <input type="password" placeholder="Last name" required>
+          <input type="email" placeholder="example@example.com" required> <br>
+          <textarea class="textArea" placeholder="your personal info" required></textarea>
+          <div class="checkbox"><p class="checkBoxTXT">I'm not a robot. <input type="checkbox" required></p></div>
+          <input type="submit" class="submitButton" value="Submit">
+        </div>
+      </form>
+-->
+
+    </div>
+  </div>
 <!-- End of desktop mode -->
 
-<!-- Mobile mode -->
+<!-- Mobile mode
+
+
 <div class="ifLargePoof">
 
     <nav class="navbar navbar-toggleable-sm navbar-custom" role="navigation">
       <ul class="navbar-nav container-fluid">
         <li class="nav-item py-md-3">
-          <a href="#" class="nav-link">Home</a>
+          <a href="#top" class="nav-link">Home</a>
         </li>
         <li class="nav-item py-md-3">
-          <a href="#" class="nav-link">About</a>
+          <a href="#aboutPos" class="nav-link">About</a>
         </li>
         <li class="nav-item py-md-3">
-          <a href="#" class="nav-link">Contact</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -143,50 +199,30 @@
 </div>
 <!-- End of mobile mode -->
 
+
 <!-- place holder is holding the footer until i know wtf to do with it -->
 <footer>Copyright &copy; 2017 all rights reserved</footer>
 
-    <!-- scrip 153 should be for smooth scrolling -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    <!-- script 158 and 160 are for smooth scrolling -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <script type="text/javascript">
-      // Select all links with hashes
-      $('a[href*="#"]')
-        // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function(event) {
-          // On-page links
-          if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-            &&
-            location.hostname == this.hostname
-          ) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-              // Only prevent default if animation is actually gonna happen
-              event.preventDefault();
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 1000, function() {
-                // Callback after animation
-                // Must change focus!
-                var $target = $(target);
-                $target.focus();
-                if ($target.is(":focus")) { // Checking if the target was focused
-                  return false;
-                } else {
-                  $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                  $target.focus(); // Set focus again
-                };
-              });
-            }
-          }
-        });
+      $(document).ready(function(){
+      	$('a[href^="#"]').on('click',function (e) {
+      		e.preventDefault();
+
+      		var target = this.hash;
+      		var $target = $(target);
+
+      		$('html, body').stop().animate({
+      			'scrollTop': $target.offset().top
+      		}, 900, 'swing');
+      	});
+      });
     </script>
+
+    <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+
   </body>
 </html>
